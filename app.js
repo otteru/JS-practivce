@@ -15,4 +15,16 @@ function calculateAdultAges(userAge) {
 
 age = 20;
 adultAges = calculateAdultAges(age);
-alert(adultAges);
+console.log(adultAges);
+
+let person = {
+	name: "kim",
+	greet() {
+		console.log("hello")
+	}
+}
+
+person.greet();
+
+console.log(greetingText.length);
+console.log(greetingText.toUpperCase());
