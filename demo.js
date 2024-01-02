@@ -18,9 +18,25 @@ function updateRemainingCharacters(event){
 	
 	const remainingCharacters = maxAllowedChars - enteredTextLength;
 	number.textContent = remainingCharacters;
+	
+	console.dir(remainingCharacters);
+	
+	if(remainingCharacters == 0){
+		number.classList.add("error");
+		inputElement.classList.add("error");
+	}else if(remainingCharacters <= 10){
+		number.classList.remove("error");
+		inputElement.classList.remove("error");
+		
+		number.classList.add("warning");
+		inputElement.classList.add("warning");
+	}else{
+		number.classList.remove("warning");
+		inputElement.classList.remove("warning");
+	}
 }
 
 
 
 
-inputElement.addEventListener('input', textNumber);
+inputElement.addEventListener('input', updateRemainingCharacters);
